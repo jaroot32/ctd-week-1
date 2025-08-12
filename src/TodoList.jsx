@@ -2,10 +2,10 @@ import TodoListItem from './TodoListItem';
 {
   /*extract from TodoList.jsx*/
 }
-function TodoList(props) {
+function TodoList({ todos }) {
   return (
     <ul>
-      {props.todos.map((todo) => (
+      {todos.map((todo) => (
         <TodoListItem key={todo.id} title={todo.title} />
       ))}
     </ul>

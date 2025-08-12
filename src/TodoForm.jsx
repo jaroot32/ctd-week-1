@@ -1,12 +1,12 @@
 import { useRef } from 'react';
 
-function TodoForm(props) {
+function TodoForm({ onAddTodo }) {
   const todoTitleInput = useRef('');
   const handleAddTodo = (event) => {
     event.preventDefault();
     const title = event.target.title.value;
     console.log(title);
-    props.onAddTodo(title);
+    onAddTodo(title);
     event.target.title.value = '';
     todoTitleInput.current.focus();
   };

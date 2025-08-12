@@ -5,7 +5,7 @@ import TodoForm from './TodoForm';
 
 function App() {
   const [todoList, setTodoList] = useState([]);
-  const handler = (title) => {
+  const addToDoHandler = (title) => {
     const newTodo = { title, id: Date.now() };
     console.log(todoList);
 
@@ -14,7 +14,7 @@ function App() {
   return (
     <div>
       <h1>Todo List</h1>
-      <TodoForm onAddTodo={handler} />
+      <TodoForm onAddTodo={addToDoHandler} />
       <TodoList todos={todoList} />
     </div>
   );
