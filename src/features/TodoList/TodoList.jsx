@@ -1,4 +1,4 @@
-import TodoListItem from './TodoListItem';
+import TodoListItem from '../../TodoListItem';
 {
   /*extract from TodoList.jsx*/
 }
