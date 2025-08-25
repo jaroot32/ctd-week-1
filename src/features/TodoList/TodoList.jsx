@@ -1,8 +1,8 @@
-import TodoListItem from '../../TodoListItem';
+import TodoListItem from './TodoListItem';
 {
   /*extract from TodoList.jsx*/
 }
-function TodoList({ todos, onCompleteTodo }) {
+function TodoList({ todos, onCompleteTodo, onUpdateTodo }) {
   const filteredTodoList = todos.filter((todo) => {
     return todo.isCompleted === false;
   });
@@ -17,6 +17,7 @@ function TodoList({ todos, onCompleteTodo }) {
           title={todo.title}
           isCompleted={todo.isCompleted}
           onCompleteTodo={onCompleteTodo}
+          onUpdateTodo={onUpdateTodo}
         />
       ))}
     </ul>
